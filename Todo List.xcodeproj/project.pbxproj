@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		771BA2DC2AF2F8F200B61280 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771BA2DB2AF2F8F200B61280 /* Extensions.swift */; };
 		771C83C72ABD6F40002DB1AD /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771C83C62ABD6F40002DB1AD /* HeaderView.swift */; };
 		771C83C92ABD7B9C002DB1AD /* TLButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771C83C82ABD7B9C002DB1AD /* TLButton.swift */; };
 		77B96FEB2AB9742F0056511A /* Todo_ListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B96FEA2AB9742F0056511A /* Todo_ListApp.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		771BA2DB2AF2F8F200B61280 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		771C83C62ABD6F40002DB1AD /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		771C83C82ABD7B9C002DB1AD /* TLButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLButton.swift; sourceTree = "<group>"; };
 		77B96FE72AB9742F0056511A /* Todo List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Todo List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,6 +161,7 @@
 			children = (
 				77B96FEE2AB9742F0056511A /* Assets.xcassets */,
 				77B970032ABAE1910056511A /* GoogleService-Info.plist */,
+				771BA2DB2AF2F8F200B61280 /* Extensions.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -198,7 +201,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					77B96FE62AB9742F0056511A = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -259,6 +262,7 @@
 				77B9701E2ABD66600056511A /* ToDoListViewViewModel.swift in Sources */,
 				77B970222ABD668C0056511A /* LoginViewViewModel.swift in Sources */,
 				77B96FEB2AB9742F0056511A /* Todo_ListApp.swift in Sources */,
+				771BA2DC2AF2F8F200B61280 /* Extensions.swift in Sources */,
 				77B970182ABD66120056511A /* ToDoListItem.swift in Sources */,
 				77B9700E2ABD65780056511A /* NewItemView.swift in Sources */,
 				77B970202ABD66820056511A /* NewItemViewViewModel.swift in Sources */,
@@ -305,6 +309,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -365,6 +370,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
