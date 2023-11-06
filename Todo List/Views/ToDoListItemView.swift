@@ -13,7 +13,7 @@ struct ToDoListItemView: View {
     
     var body: some View {
         HStack {
-            VStack{
+            VStack(alignment: .leading) {
                 Text(item.title)
                     .font(.body)
                 Text("\(Date(timeIntervalSince1970: item.dueDate).formatted(date: .abbreviated, time: .shortened))")
@@ -24,6 +24,9 @@ struct ToDoListItemView: View {
             Spacer()
             
             Button {
+                let impactMed = UIImpactFeedbackGenerator(style: .medium)
+                impactMed.impactOccurred()
+
                 viewModel.toggleIsDone(item: item)
             } label: {
                 Image(systemName: item.isDone ? "checkmark.circle.fill" : "circle")
