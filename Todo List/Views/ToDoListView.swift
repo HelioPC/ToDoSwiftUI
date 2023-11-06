@@ -16,7 +16,7 @@ struct ToDoListView: View {
         self._viewModel = StateObject(wrappedValue: ToDoListViewViewModel(userId: userId))
         self._items = FirestoreQuery(collectionPath: "users/\(userId)/todos")
     }
-    
+
     var body: some View {
         NavigationStack {
             VStack {
