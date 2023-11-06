@@ -12,4 +12,10 @@ class ToDoListViewViewModel: ObservableObject {
     
     init() {
     }
+    
+    func deleteItem(id: String) {
+    }
+    
+    func editItem(id: String, title: String, dueDate: TimeInterval) {        
+    }
 }

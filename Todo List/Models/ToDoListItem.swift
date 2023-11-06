@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ToDoListItem: Codable {
+struct ToDoListItem: Codable, Identifiable {
     let id: String
     let title: String
     let dueDate: TimeInterval
