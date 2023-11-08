@@ -26,7 +26,4 @@ class ToDoListViewViewModel: ObservableObject {
             .document(id)
             .delete()
     }
-    
-    func editItem(id: String, title: String, dueDate: TimeInterval) {        
-    }
 }

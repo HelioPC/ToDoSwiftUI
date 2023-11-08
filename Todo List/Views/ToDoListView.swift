@@ -11,6 +11,7 @@ import SwiftUI
 struct ToDoListView: View {
     @StateObject var viewModel: ToDoListViewViewModel
     @FirestoreQuery var items: [ToDoListItem]
+    @State var editItem: ToDoListItem? = nil
     
     init(userId: String) {
         self._viewModel = StateObject(wrappedValue: ToDoListViewViewModel(userId: userId))
@@ -30,7 +31,8 @@ struct ToDoListView: View {
                             }
 
                             Button {
-                                viewModel.editItem(id: item.id, title: "", dueDate: Date().timeIntervalSince1970)
+                                editItem = item
+                                viewModel.showingNewItemView = true
                             } label: {
                                 Label("Edit", systemImage: "pencil")
                             }
@@ -47,7 +49,7 @@ struct ToDoListView: View {
                 }
             }
             .sheet(isPresented: $viewModel.showingNewItemView, content: {
-                NewItemView(newItemPresented: $viewModel.showingNewItemView)
+                NewItemView(todoItem: editItem, newItemPresented: $viewModel.showingNewItemView)
             })
         }
     }

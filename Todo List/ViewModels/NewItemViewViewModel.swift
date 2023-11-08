@@ -10,11 +10,13 @@ import FirebaseFirestore
 import Foundation
 
 class NewItemViewViewModel: ObservableObject {
-    @Published var title = ""
-    @Published var dueDate = Date()
+    @Published var title: String
+    @Published var dueDate: Date
     @Published var showAlert = false
     
-    init() {
+    init(title: String? = "", dueDate: Date? = Date()) {
+        self.title = title ?? ""
+        self.dueDate = dueDate ?? Date()
     }
     
     func save() {
@@ -42,6 +44,32 @@ class NewItemViewViewModel: ObservableObject {
             .collection("todos")
             .document(newId)
             .setData(newItem.asDictionary())
+    }
+    
+    func edit(newId: String) {
+        guard canSave else {
+            return
+        }
+        
+        // Get current user id
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        
+        // Create model
+        let newItem = ToDoListItem(
+            id: newId, title: title,
+            dueDate: dueDate.timeIntervalSince1970,
+            createdDate: Date().timeIntervalSince1970,
+            isDone: false
+        )
+        
+        // Save model
+        let db = Firestore.firestore()
+        
+        db.collection("users")
+            .document(uid)
+            .collection("todos")
+            .document(newId)
+            .updateData(newItem.asDictionary())
     }
     
     var canSave: Bool {
