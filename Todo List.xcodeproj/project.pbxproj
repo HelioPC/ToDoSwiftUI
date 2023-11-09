@@ -42,6 +42,7 @@
 		771BA2DB2AF2F8F200B61280 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		771C83C62ABD6F40002DB1AD /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		771C83C82ABD7B9C002DB1AD /* TLButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLButton.swift; sourceTree = "<group>"; };
+		776261D22AFCC5A200DAE1B3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		77B96FE72AB9742F0056511A /* Todo List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Todo List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		77B96FEA2AB9742F0056511A /* Todo_ListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo_ListApp.swift; sourceTree = "<group>"; };
 		77B96FEC2AB9742F0056511A /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -85,6 +86,7 @@
 		77B96FDE2AB9742E0056511A = {
 			isa = PBXGroup;
 			children = (
+				776261D22AFCC5A200DAE1B3 /* README.md */,
 				77B96FE92AB9742F0056511A /* Todo List */,
 				77B96FE82AB9742F0056511A /* Products */,
 			);
