@@ -25,12 +25,14 @@ struct NewItemView: View {
                     )
                 )
             )
+        } else {
+            
         }
     }
     
     var body: some View {
         VStack {
-            Text("New item")
+            Text(todoItem == nil ? "New item" : "Edit item")
                 .font(.system(size: 32))
                 .bold()
                 .padding(.top, 100)
